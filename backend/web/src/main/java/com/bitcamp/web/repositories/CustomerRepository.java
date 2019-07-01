@@ -10,6 +10,6 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
 
-  public CustomerDTO findByCustomerId(String customerId);
+  // public CustomerDTO findByCustomerId(String customerId);
     
 }
