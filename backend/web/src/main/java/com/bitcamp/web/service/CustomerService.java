@@ -13,39 +13,65 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CustomerService {
-    @Autowired CustomerService customerRepository;
-    public long count() {
-        return customerRepository.count();
-    }
-    public void delete(Customer entity){
-        customerRepository.delete(entity);
-    }
-    public void deleteAll() {
-        customerRepository.deleteAll();
-    }
-    public void deleteAll(Iterable<Customer> entities) {
-        customerRepository.deleteAll(entities);
-    }
-    public void deleteById(Long id) {
-        customerRepository.deleteById(id);
-    }
-    public boolean existsById(Long id) {
-        return customerRepository.existsById(id);
-    }
-    public Iterable<Customer> findAll() {
-        return customerRepository.findAll();
-    }
-    public Iterable<Customer> findAllById(Iterable<Long> ids) {
-        return customerRepository.findAllById(ids);
-    }
-    public Optional<Customer> findById(Long id) {
-        return customerRepository.findById(id);
-    }
-    public Customer save(Customer customer){
-        return customerRepository.save(customer);
-    }
-    public Iterable<Customer> saveAll(Iterable<Customer> entities){
-    return customerRepository.saveAll(entities);
-    }
+   @Autowired CustomerRepository customerRepository;
+
+   public long    count(){
+       return customerRepository.count();
+   }
+
+   public void    delete(Customer entity){
+       customerRepository.delete(entity);
+   }
+
+   public void    deleteAll(){
+       customerRepository.deleteAll();
+   }
+
+   public void    deleteAll(Iterable<Customer> entities){
+       customerRepository.deleteAll(entities);
+   }
+
+   public void    deleteById(Long id){
+       customerRepository.deleteById(id);
+   }
+
+   public boolean    existsById(Long id){
+       return customerRepository.existsById(id);
+   }
+
+   public Iterable<Customer>    findAll(){
+       return customerRepository.findAll();
+   }
+
+   public Iterable<Customer>    findAllById(Iterable<Long> ids){
+       return customerRepository.findAllById(ids);
+   }
+
+   public Optional<Customer>    findById(Long id){
+       return customerRepository.findById(id);
+   }
+
+   public Customer    save(Customer entity){
+       return customerRepository.save(entity);
+   }
+
+   public Iterable<Customer>    saveAll(Iterable<Customer> entities){
+       return customerRepository.saveAll(entities);
+   }
+//    public CustomerDTO login(Customer entity){
+//         return customerRepository.login(entity);
+//    }
+
+
+
+
+
+
+
+
+   // //추가
+   // public Optional findByCustomerId(String customerId){
+   //     return customerRepository.findByCustomerId(customerId);
+   // }
 
 }

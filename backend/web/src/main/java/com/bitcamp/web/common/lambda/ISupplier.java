@@ -3,7 +3,8 @@ package com.bitcamp.web.common.lambda;
 /**
  * ISupplier
  */
-public class ISupplier {
-
-    
+@FunctionalInterface
+public interface ISupplier{
+    public abstract Object get();
 }
+    

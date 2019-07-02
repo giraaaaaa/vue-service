@@ -1,4 +1,5 @@
 package com.bitcamp.web.entities;
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -12,11 +13,13 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 @Entity
 @Getter
+@Setter
 @ToString
 @Table(name = "CUSTOMERS")
 public class Customer implements Serializable{  //매퍼역할
@@ -32,12 +35,21 @@ public class Customer implements Serializable{  //매퍼역할
    @Column(name="city") private String city;
    @Column(name="address") private String address;
    @Column(name="postalcode") private String postalcode;
-   @Column(name="photo") private String  photo;
+   @Column(name="photo") private String  photo;  //이름이 같으면 생략가능
 
    @Override
    public String toString(){
        return String.format("고객정보 No: %d\n"
-       +"ID: %s", id,customerId);
+       +"ID: %s", id,customerId
+       +"NAME: %s",customerName
+       +"PASSWORD: %s", password
+       +"SSN: %s", ssn
+       +"PHONE: %s", phone
+       +"CITY: %s", city
+       +"ADDRESS: %s", address
+       +"POSTALCODE: %s", postalcode
+       +"PHOTO: %s", photo
+       );
    }
 
    //resultMap이라 생각
