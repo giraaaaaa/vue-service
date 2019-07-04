@@ -120,6 +120,7 @@ public class CustomerController {
        map.put("result", "SUCCESS");
        return map;
     }
+    
     @PostMapping("/login")
         public CustomerDTO login(@RequestBody CustomerDTO dto){
        System.out.println("로그인 진입");
