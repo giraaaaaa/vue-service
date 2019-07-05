@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
-import Hello from './component/presentational/Hello.js';
-import navbar from './component/presentational/navbar.js';
+import Hello from './component/presentational/Hello.js.js';
+import navbar from './component/presentational/navbar.js.js';
 class App extends Component{
   render(){
     return (
@@ -15,3 +15,4 @@ class App extends Component{
 }
 
 export default App;
+ 
