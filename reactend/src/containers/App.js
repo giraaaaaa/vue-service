@@ -1,13 +1,19 @@
 import React, {Component} from 'react';
-import './App.css';
-import Hello from './component/presentational/Hello.js.js';
-import navbar from './component/presentational/navbar.js.js';
+import '../assets/css/App.css'
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import MyNavBar from '../components/MyNavBar'
+import Mypage from '../containers/Mypage'
+import Hello from '../components/Hello'
+import Login from './Login'
+import Join from './Join'
 class App extends Component{
   render(){
     return (
       <div className='wrapper'>
-        <navbar></navbar>
-      <Hello name="홍길동">Hello React</Hello>
+        <MyNavBar></MyNavBar>
+      <Login></Login>
+      <Join></Join>
+      <Mypage></Mypage>
       </div>
       
     )
