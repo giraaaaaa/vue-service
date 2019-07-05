@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import './Hello.js/index.js.js'
+import './Hello.jsx/index.js'
 const Hello = (props) =>{
     return <p>Hello, my name is {props.name}.</p>
 }
