@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Figure,Table }   from 'react-bootstrap'
-import Profile from '../assets/images/3oneyoung.png'
+import Profile from '../../assets/images/3oneyoung.png'
 class Mypage extends Component{
     render(){
         return(
