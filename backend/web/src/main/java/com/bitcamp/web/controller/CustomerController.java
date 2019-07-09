@@ -31,7 +31,7 @@ import org.springframework.beans.BeanUtils;
 
 import antlr.collections.impl.LList;
 
-@CrossOrigin(origins = "http://localhost:8080", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 @RestController
 @RequestMapping("/customers")
 public class CustomerController {

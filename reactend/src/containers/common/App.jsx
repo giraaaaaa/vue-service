@@ -7,6 +7,9 @@ import MyNavBar from '../../components/MyNavBar'
 // import Join from '../customer/Join'
 
 class App extends Component{
+  constructor(){
+    super()
+  }
   render(){
     return (
       <div className='wrapper'>

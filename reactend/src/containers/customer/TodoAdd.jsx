@@ -4,14 +4,14 @@ class TodoAdd extends Component{
     constructor(){
         super()
         this.state = { items: [], text: ''};
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
 
     }
-    handleChange(e){
+    handleChange=(e)=>{
         this.setState({ text: e.target.value}); //setstate로 부모에게 값을 보낸다
     }
-    handleSubmit(e){
+    handleSubmit=(e)=>{
         e.preventDefault();
         if(!this.state.text.length){
             return;
