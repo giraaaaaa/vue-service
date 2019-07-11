@@ -15,6 +15,7 @@ class Login extends Component{
         return(
             <div>
                 <h2>로그인</h2>
+                <form onSubmit="{this.log}">
                 <Form>
                 <Form.Group controlId="customerId">
                     <Form.Label>CUSTOMER ID</Form.Label>
@@ -32,10 +33,13 @@ class Login extends Component{
                         onChange= {this.pwChange}
                     />
                 </Form.Group>
+                
+                </Form>
+                <input type="submit" value='test'/>
                 <Button variant="success" onClick={this.login}>확인</Button>
                 <Button variant="secondary">취소</Button>
 
-                </Form>
+                </form>
             </div>
         )
     }
@@ -46,6 +50,11 @@ class Login extends Component{
         this.setState({password: e.target.value})
     }
     login =()=>{
+        e.preventDefault()
+        this.setState({submitted: true})
+        const{customerId, password} = this.state
+        console.log(`customerId is ${customerId}`)
+        console.log(`Password is ${password}`)
         let data = {
             customerId : this.state.customerId,
             password : this.state.password
