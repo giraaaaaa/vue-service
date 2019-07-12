@@ -1,12 +1,14 @@
 package com.bitcamp.web.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AccessLevel;
@@ -22,6 +24,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Table(name = "CUSTOMERS")
+
 public class Customer implements Serializable{  //매퍼역할
    private static final long serialVersionUID = 1L;
    @Id
@@ -36,7 +39,8 @@ public class Customer implements Serializable{  //매퍼역할
    @Column(name="address") private String address;
    @Column(name="postalcode") private String postalcode;
    @Column(name="photo") private String  photo;  //이름이 같으면 생략가능
-
+    @OneToMany
+    private List<MemberRole> role;
    @Override
    public String toString(){
        return String.format("고객정보 No: %d\n"

@@ -1,0 +1,11 @@
+import {combinReducers} from 'redux'
+import todo from '.'
+
+const todoApp = combinReducers(
+    {
+
+        todo: todo
+    }
+)
+
+export default todoApp
