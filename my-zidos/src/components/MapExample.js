@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Geolocation from "./Content";
+import Geolocation from "./Contents";
 
 
 class MapExample extends React.Component {

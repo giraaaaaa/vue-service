@@ -34,10 +34,6 @@ class indexzido extends Component{
 
         // 지도를 생성합니다    
         new kakao.maps.Map(mapContainer, mapOption); 
-
-
-  
-           
      }
     //  shouldComponentUpdate
     shouldComponentUpdate(newProps, newState){
