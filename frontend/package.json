@@ -65,7 +65,7 @@
     "react-valida-hook": "0.0.9",
     "react-validation": "^3.0.7",
     "reactstrap": "7.1.0",
-    "validator": "^11.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@types/googlemaps": "3.30.18",
